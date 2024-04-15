@@ -3,23 +3,45 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "foo3@foo.com",
+    "email": "foo7@foo.com",
     "password": "test"
 }
 
+### Sign In user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "foo5@foo.com",
+    "password": "test"
+}
+
+### Find current user
+GET http://localhost:3000/auth/whoami
+
+### Sign out user
+POST http://localhost:3000/auth/signout
+
 ### Find user with ID
-GET http://localhost:3000/auth/2
+GET http://localhost:3000/auth/1
 
 ### Find all users with given email
 GET http://localhost:3000/auth/?email=foo3@foo.com
 
 ### Remove user with ID
-DELETE http://localhost:3000/auth/1
+DELETE http://localhost:3000/auth/2
 
 ### Patch user with ID
-PATCH http://localhost:3000/auth/2
+PATCH http://localhost:3000/auth/1
 content-type: application/json
 
 {
     "password": "aaaa"
 }
+
+
+### Set a color
+GET http://localhost:3000/auth/colors/blue
+
+### Get a color
+GET http://localhost:3000/auth/colors
