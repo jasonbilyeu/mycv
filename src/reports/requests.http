@@ -1,0 +1,22 @@
+### Sign In user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "foo7@foo.com",
+    "password": "test"
+}
+
+### Create a report
+POST http://localhost:3000/reports
+content-type: application/json
+
+{
+  "make": "Toyota",
+  "model": "Corolla",
+  "year": 2015,
+  "price": 10000,
+  "mileage": 10000,
+  "lat": 37.7749,
+  "lng": -122.4194
+}
