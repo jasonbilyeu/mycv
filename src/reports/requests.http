@@ -3,7 +3,7 @@ POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-    "email": "foo7@foo.com",
+    "email": "foo1@foo.com",
     "password": "test"
 }
 
@@ -12,11 +12,23 @@ POST http://localhost:3000/reports
 content-type: application/json
 
 {
-  "make": "Toyota",
-  "model": "Corolla",
-  "year": 2015,
-  "price": 10000,
+  "make": "Ford",
+  "model": "Mustang",
+  "year": 2017,
+  "price": 20000,
   "mileage": 10000,
   "lat": 37.7749,
   "lng": -122.4194
 }
+
+### Approve a report
+PATCH http://localhost:3000/reports/4
+content-type: application/json
+
+{
+  "approved": true
+}
+
+### Get an estimate for an existing vehicle
+GET http://localhost:3000/reports?make=Ford&model=Mustang&year=2016&mileage=15000&lat=37.7749&lng=-122.4194
+
